@@ -1,0 +1,878 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "D:\Program Files\FME\fme.exe" "E:\My Learning Folder\FME\Workspace\SpatialIndexCreator.fmw"
+#          --SourceDataset_MSSQL_SPATIAL "OS_SampleData"
+#    
+#    
+#!   END_PYTHON=""
+#!   REDIRECT_TERMINATORS="NONE"
+#!   HISTORY=""
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_DOCUMENT_PRIORGUID="e83f0b96-e90f-425b-b53e-998eb94f90b1,c4c8284d-3404-4df7-9752-c41a82ac0076"
+#!   SOURCE_ROUTING_FILE=""
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   PASSWORD=""
+#!   DOC_TOP_LEFT="-176.752 -583.382"
+#!   LOG_FILE=""
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   DOC_EXTENTS="1846.89 409.629"
+#!   FME_BUILD_NUM="17291"
+#!   DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   USAGE=""
+#!   TITLE=""
+#!   FME_SERVER_SERVICES=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2017.0.1.1 (20170512 - Build 17291 - WIN64)"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   MAX_LOG_FEATURES="200"
+#!   VIEW_POSITION="-296.878 59.3756"
+#!   BEGIN_PYTHON=""
+#!   TERMINATE_REJECTED="NO"
+#!   SHOW_INFO_NODES="true"
+#!   WORKSPACE_VERSION="1"
+#!   LAST_SAVE_DATE="2017-06-20T20:58:04"
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   SHOW_ANNOTATIONS="true"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   MARKDOWN_DESCRIPTION=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   USE_MARKDOWN=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   END_TCL=""
+#!   ZOOM_SCALE="100"
+#!   FME_DOCUMENT_GUID="5fd717de-dec4-415e-8890-0d48a0b1c303"
+#!   SOURCE="NONE"
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   PYTHON_COMPATIBILITY="27"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="MSSQL_SPATIAL"
+#!   DATASET="$(SourceDataset_MSSQL_SPATIAL)"
+#!   KEYWORD="MSSQL_SPATIAL_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="mssql_sql_statement &quot;&quot; mssql_where_clause &quot;&quot; mssql_geom_column &quot;&quot; mssql_geog_column &quot;&quot;"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="mssql_spatial_type char(254) fme_color char(50) multi_reader_type char(50) fme_text_string char(50) fme_type char(50) fme_text_size float multi_reader_keyword char(50) fme_feature_type char(50) multi_reader_full_id integer fme_dataset char(50) multi_reader_id integer fme_primary_axis float fme_sweep_angle float fme_geometry fme_char(50) fme_rotation float fme_basename char(50) fme_fill_color char(50) fme_secondary_axis float fme_start_angle float"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP mssql_reader_group mssql_where_clause%mssql_sql_statement%mssql_geog_group Table&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP mssql_geog_group mssql_has_geog%mssql_geom_column%mssql_geog_column Spatial&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT mssql_where_clause WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT mssql_sql_statement SELECT Statement&quot; &quot;&quot; &quot;GUI IGNORE_VALUE ACTIVECHOICE mssql_has_geog Yes,mssql_geom_column%No,mssql_geog_column Specify Geography (Geodetic) Column&quot; No &quot;GUI OPTIONAL WHOLE_LINE TEXT mssql_geom_column Geometry Column&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE TEXT mssql_geog_column Geography Column&quot; &quot;&quot; "
+#!   ATTR_INDEX_TYPES="Clustered ClusteredNotNull Indexed IndexedNotNull NotNull PrimaryKey Unique UniqueClustered"
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="DATABASE"
+#!   GENERATE_FME_BUILD_NUM="17291"
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   START_FEATURE=""
+#!   MIN_FEATURES=""
+#!   MAX_FEATURES=""
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE_ATTRS"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
+#!   VALUE="YES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="Table1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="MSSQL_SPATIAL_IN_READ_CACHE_SIZE MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL MSSQL_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS MSSQL_SPATIAL_IN_USE_MAKE_VALID MSSQL_SPATIAL_OUT_BULK_INSERT MSSQL_SPATIAL_OUT_TRANSACTION_INTERVAL MSSQL_SPATIAL_OUT_BEGIN_SQL{0} MSSQL_SPATIAL_OUT_END_SQL{0} MSSQL_SPATIAL_OUT_ORIENT_POLYGONS MSSQL_SPATIAL_OUT_HANDLE_MULTIPLE_SPATIAL_COLUMNS"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_PROXY"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="Database"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_AUTHENTICATION"
+#!   VALUE="NO"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="bit"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="image"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ntext"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uniqueidentifier"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="timestamp"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="tinyint"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="bigint"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="bigint"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="identity"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="binary(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="nchar(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="datetime2"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="datetime"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smalldatetime"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="time"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="numeric(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="numeric(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="money"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallmoney"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="varchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="nvarchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="varbinary(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_none"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_multipoint"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_linestring"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_circularstring"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_multilinestring"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_compoundcurve"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_curvepolygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_multipolygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_point"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_polygon"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_linestring"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_polygon"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_polygon"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_geometrycollection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_polygon"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_linestring"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_linestring"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="mssql_spatial_none"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="MSSQL_SPATIAL"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="dbo.OS_ABPLUS_SAMPLE"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="2"
+#!   FEAT_GEOMTYPE="mssql_spatial_point mssql_spatial_linestring mssql_spatial_circularstring mssql_spatial_polygon mssql_spatial_curvepolygon mssql_spatial_multipoint mssql_spatial_multilinestring mssql_spatial_compoundcurve mssql_spatial_multipolygon mssql_spatial_geometrycollection mssql_spatial_none"
+#!   POSITION="-176.752 -226.875"
+#!   BOUNDING_RECT="-176.752 -226.875 604.881 71"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="MSSQL_SPATIAL_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="UPRN" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CLASS" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CUSTODIAN_CODE" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DEPT_NAME" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LEGAL_NAME" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SUB_BLDG_NAME" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BLDG_NAME" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BLDG_NUMBER" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SAO_START_NO" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SAO_START_SFX" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SAO_END_NO" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SAO_END_SFX" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SAO_TEXT" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PAO_START_NO" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PAO_START_SFX" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PAO_END_NO" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PAO_END_SFX" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PAO_TEXT" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="USRN" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STREET_NAME" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="TOWN_NAME" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="POSTCODE" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="EASTING" ATTR_TYPE="numeric(10,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="NORTHING" ATTR_TYPE="numeric(10,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LATITUDE" ATTR_TYPE="numeric(20,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LONGITUDE" ATTR_TYPE="numeric(20,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FULL_ADDRESS" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="mssql_geog_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="mssql_reader_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="mssql_geom_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="mssql_sql_statement" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="mssql_where_clause" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="mssql_has_geog" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="mssql_geog_column" PARM_VALUE="&lt;Unused&gt;"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_MSSQL_SPATIAL FMT:MSSQL_SPATIAL%FAMILY:Microsoft&lt;space&gt;SQL&lt;space&gt;Server Connection:"
+#!   DEFAULT_VALUE="OS_SampleData"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="3"
+#!   TYPE="SQLExecutor"
+#!   VERSION="7"
+#!   POSITION="1670.14 -173.753"
+#!   BOUNDING_RECT="1670.14 -173.753 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17291"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <OUTPUT_FEAT NAME="INITIATOR"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="_xmax" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_xmin" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_ymax" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_ymin" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_zmax" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_zmin" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="_xmax" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_xmin" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_ymax" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_ymin" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_zmax" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_zmin" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_reader_error" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="MSSQL_SPATIAL"/>
+#!     <XFORM_PARM PARM_NAME="DYNGROUP_0" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MSSQL_SPATIAL_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="OS_SampleData"/>
+#!     <XFORM_PARM PARM_NAME="MSSQL_SPATIAL_NAMED_CONNECTION" PARM_VALUE="OS_SampleData"/>
+#!     <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLExecutor"/>
+#!     <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="DB_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COMBINE_ATTRS" PARM_VALUE="Result Attributes Only"/>
+#!     <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Initiator Geometry Only"/>
+#!     <XFORM_PARM PARM_NAME="MSSQL_SPATIAL_COMMAND_TIMEOUT" PARM_VALUE="30"/>
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="IF&lt;space&gt;EXISTS&lt;openparen&gt;SELECT&lt;space&gt;*&lt;space&gt;FROM&lt;space&gt;sys.indexes&lt;space&gt;WHERE&lt;space&gt;name=&lt;apos&gt;SI_OS_ABPLUS_SAMPLE&lt;apos&gt;&lt;space&gt;AND&lt;space&gt;object_id=OBJECT_ID&lt;openparen&gt;&lt;apos&gt;dbo.&lt;openbracket&gt;OS_ABPLUS_SAMPLE&lt;closebracket&gt;&lt;apos&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;BEGIN&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;CREATE&lt;space&gt;SPATIAL&lt;space&gt;INDEX&lt;space&gt;SI_OS_ABPLUS_SAMPLE&lt;space&gt;ON&lt;space&gt;dbo.&lt;openbracket&gt;OS_ABPLUS_SAMPLE&lt;closebracket&gt;&lt;openparen&gt;GEOM&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;USING&lt;space&gt;GEOMETRY_AUTO_GRID&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;WITH&lt;space&gt;&lt;openparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;BOUNDING_BOX=&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_xmin&lt;closeparen&gt;&lt;comma&gt;&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;_ymin&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_xmax&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_ymax&lt;closeparen&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;CELLS_PER_OBJECT=16&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;DROP_EXISTING=ON&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;END&lt;lf&gt;ELSE&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;CREATE&lt;space&gt;SPATIAL&lt;space&gt;INDEX&lt;space&gt;SI_OS_ABPLUS_SAMPLE&lt;space&gt;ON&lt;space&gt;dbo.&lt;openbracket&gt;OS_ABPLUS_SAMPLE&lt;closebracket&gt;&lt;openparen&gt;GEOM&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;USING&lt;space&gt;GEOMETRY_AUTO_GRID&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;WITH&lt;space&gt;&lt;openparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;BOUNDING_BOX=&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_xmin&lt;closeparen&gt;&lt;comma&gt;&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;_ymin&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_xmax&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_ymax&lt;closeparen&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;CELLS_PER_OBJECT=16&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="MSSQL_SPATIAL_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,&quot;IGNORE TEXT&quot;,MSSQL_SPATIAL&lt;space&gt;,MSSQL_SPATIAL_COMMAND_TIMEOUT,&quot;OPTIONAL INTEGER&quot;,MSSQL_SPATIAL&lt;space&gt;Command&lt;space&gt;Timeout&lt;space&gt;&lt;openparen&gt;Seconds&lt;closeparen&gt;:,MSSQL_SPATIAL_NAMED_CONNECTION,&quot;IGNORE TEXT&quot;,MSSQL_SPATIAL&lt;space&gt;Connection:"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="BoundingBoxAccumulator"
+#!   VERSION="4"
+#!   POSITION="714.632 -293.753"
+#!   BOUNDING_RECT="714.632 -293.753 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17291"
+#! >
+#!     <OUTPUT_FEAT NAME="BOUNDING_BOX"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <OUTPUT_FEAT NAME="ORIGINAL"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="UPRN" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CLASS" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CUSTODIAN_CODE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="DEPT_NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LEGAL_NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="SUB_BLDG_NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLDG_NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLDG_NUMBER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="SAO_START_NO" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="SAO_START_SFX" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="SAO_END_NO" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="SAO_END_SFX" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="SAO_TEXT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="PAO_START_NO" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="PAO_START_SFX" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="PAO_END_NO" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="PAO_END_SFX" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="PAO_TEXT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="USRN" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="STREET_NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TOWN_NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="POSTCODE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="EASTING" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="NORTHING" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LATITUDE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LONGITUDE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="FULL_ADDRESS" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TOPFER_INDEX" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Drop Incoming Attributes"/>
+#!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SOURCE_SCALE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="BoundingBoxAccumulator"/>
+#!     <XFORM_PARM PARM_NAME="DESTINATION_SCALE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="BoundsExtractor"
+#!   VERSION="2"
+#!   POSITION="742.876 -583.382"
+#!   BOUNDING_RECT="742.876 -583.382 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17291"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_xmax" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_xmin" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_ymax" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_ymin" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_zmax" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_zmin" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="YMIN" PARM_VALUE="_ymin"/>
+#!     <XFORM_PARM PARM_NAME="YMAX" PARM_VALUE="_ymax"/>
+#!     <XFORM_PARM PARM_NAME="ZMAX" PARM_VALUE="_zmax"/>
+#!     <XFORM_PARM PARM_NAME="ZMIN" PARM_VALUE="_zmin"/>
+#!     <XFORM_PARM PARM_NAME="XMIN" PARM_VALUE="_xmin"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="BoundsExtractor"/>
+#!     <XFORM_PARM PARM_NAME="XMAX" PARM_VALUE="_xmax"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="6"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="9"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 BOUNDING_BOX"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="10"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 INITIATOR"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+FME_PYTHON_VERSION 27
+GUI IGNORE SourceDataset_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_PERSISTENT_CONNECTION_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_COMMAND_TIMEOUT_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_WHERE_CLAUSE_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_EXPOSE_ATTRS_GROUP_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINX_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINY_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_CLIP_TO_ENVELOPE_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_ADVANCED_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_READ_CACHE_SIZE_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_USE_MAKE_VALID_MSSQL_SPATIAL_1
+DEFAULT_MACRO SourceDataset_MSSQL_SPATIAL OS_SampleData
+GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_MSSQL_SPATIAL FMT:MSSQL_SPATIAL%FAMILY:Microsoft<space>SQL<space>Server Connection:
+INCLUDE [ if {{$(SourceDataset_MSSQL_SPATIAL)} == {}} { puts_real {Parameter 'SourceDataset_MSSQL_SPATIAL' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MSSQL_SPATIAL
+READER_KEYWORD MSSQL_SPATIAL_1
+READER_GEN_DIRECTIVES READ_CACHE_SIZE,10,ADVANCED,,FME_CONNECTION_GROUP,,TABLELIST,dbo.OS_ABPLUS_SAMPLE,USE_SEARCH_ENVELOPE,NO,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,CLIP_TO_ENVELOPE,NO,USE_MAKE_VALID,NO,SEARCH_ENVELOPE_MINY,0,PERSISTENT_CONNECTION,NO,SEARCH_ENVELOPE_MAXY,0,COMMAND_TIMEOUT,30,_MERGE_SCHEMAS,YES,SEARCH_ENVELOPE_MINX,0,MSSQL_SPATIAL_EXPOSE_FORMAT_ATTRS,,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,WHERE_CLAUSE,,NAMED_CONNECTION,OS_SampleData,ASSUME_ONE_SRID_PER_COL,,EXPOSE_ATTRS_GROUP,,SEARCH_ENVELOPE_MAXX,0,HANDLE_MULTIPLE_SPATIAL_COLUMNS,NO
+
+WRITER_TYPE NULL
+WRITER_KEYWORD NULL_DEST
+NULL_DEST_DATASET null
+#! END_WB_HEADER
+
+#! START_WB_HEADER
+MACRO WB_KEYWORD "MSSQL_SPATIAL_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER MSSQL_SPATIAL MSSQL_SPATIAL_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_MSSQL_SPATIAL_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER MSSQL_SPATIAL MSSQL_SPATIAL_1
+DEFAULT_MACRO SourceDataset_MSSQL_SPATIAL_1 $(SourceDataset_MSSQL_SPATIAL)
+GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_MSSQL_SPATIAL_1 FMT:MSSQL_SPATIAL Connection:
+DEFAULT_MACRO MSSQL_SPATIAL_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_MSSQL_SPATIAL_1 Yes
+MSSQL_SPATIAL_1_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(MSSQL_SPATIAL_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_MSSQL_SPATIAL_1)"
+# ============================================================================
+# The following specifies whether to create a persistent connection. If set
+# to YES, the connection will remain open until FME is shut down.
+DEFAULT_MACRO MSSQL_SPATIAL_IN_PERSISTENT_CONNECTION_MSSQL_SPATIAL_1 NO
+MSSQL_SPATIAL_1_PERSISTENT_CONNECTION "$(MSSQL_SPATIAL_IN_PERSISTENT_CONNECTION_MSSQL_SPATIAL_1)"
+GUI CHECKBOX MSSQL_SPATIAL_IN_PERSISTENT_CONNECTION_MSSQL_SPATIAL_1 YES%NO Persistent Connection
+# Timeout
+DEFAULT_MACRO MSSQL_SPATIAL_IN_COMMAND_TIMEOUT_MSSQL_SPATIAL_1 30
+MSSQL_SPATIAL_1_COMMAND_TIMEOUT "$(MSSQL_SPATIAL_IN_COMMAND_TIMEOUT_MSSQL_SPATIAL_1)"
+GUI OPTIONAL INTEGER MSSQL_SPATIAL_IN_COMMAND_TIMEOUT_MSSQL_SPATIAL_1 Command Timeout (Seconds):
+# ============================================================================
+# And an optional global WHERE clause
+DEFAULT_MACRO MSSQL_SPATIAL_IN_WHERE_CLAUSE_MSSQL_SPATIAL_1 
+MSSQL_SPATIAL_1_WHERE_CLAUSE "$(MSSQL_SPATIAL_IN_WHERE_CLAUSE_MSSQL_SPATIAL_1)"
+GUI OPTIONAL TEXT MSSQL_SPATIAL_IN_WHERE_CLAUSE_MSSQL_SPATIAL_1 WHERE Clause:
+# ============================================================================
+# bounding box with optional clipping
+DEFAULT_MACRO MSSQL_SPATIAL_IN_EXPOSE_ATTRS_GROUP_MSSQL_SPATIAL_1 
+MSSQL_SPATIAL_1_EXPOSE_ATTRS_GROUP "$(MSSQL_SPATIAL_IN_EXPOSE_ATTRS_GROUP_MSSQL_SPATIAL_1)"
+GUI DISCLOSUREGROUP MSSQL_SPATIAL_IN_EXPOSE_ATTRS_GROUP_MSSQL_SPATIAL_1 MSSQL_SPATIAL_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINX_MSSQL_SPATIAL_1 0
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINX_MSSQL_SPATIAL_1)"
+GUI OPTIONAL FLOAT MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINX_MSSQL_SPATIAL_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINY_MSSQL_SPATIAL_1 0
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINY_MSSQL_SPATIAL_1)"
+GUI OPTIONAL FLOAT MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINY_MSSQL_SPATIAL_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_MSSQL_SPATIAL_1 0
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_MSSQL_SPATIAL_1)"
+GUI OPTIONAL FLOAT MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_MSSQL_SPATIAL_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_MSSQL_SPATIAL_1 0
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_MSSQL_SPATIAL_1)"
+GUI OPTIONAL FLOAT MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_MSSQL_SPATIAL_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_MSSQL_SPATIAL_1 
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_MSSQL_SPATIAL_1)"
+GUI OPTIONAL COORDSYS MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_MSSQL_SPATIAL_1 Search Envelope Coordinate System:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_CLIP_TO_ENVELOPE_MSSQL_SPATIAL_1 NO
+MSSQL_SPATIAL_1_CLIP_TO_ENVELOPE "$(MSSQL_SPATIAL_IN_CLIP_TO_ENVELOPE_MSSQL_SPATIAL_1)"
+GUI OPTIONAL CHECKBOX MSSQL_SPATIAL_IN_CLIP_TO_ENVELOPE_MSSQL_SPATIAL_1 YES%NO Clip to Search Envelope
+GUI DISCLOSUREGROUP MSSQL_SPATIAL_IN_ADVANCED_MSSQL_SPATIAL_1 READ_CACHE_SIZE%ASSUME_ONE_SRID_PER_COL%HANDLE_MULTIPLE_SPATIAL_COLUMNS%USE_MAKE_VALID Advanced
+# ============================================================================
+# This keyword controls how many records to retrieve at one time into local
+# memory from the provider
+DEFAULT_MACRO MSSQL_SPATIAL_IN_READ_CACHE_SIZE_MSSQL_SPATIAL_1 10
+MSSQL_SPATIAL_1_READ_CACHE_SIZE "$(MSSQL_SPATIAL_IN_READ_CACHE_SIZE_MSSQL_SPATIAL_1)"
+GUI OPTIONAL TEXT MSSQL_SPATIAL_IN_READ_CACHE_SIZE_MSSQL_SPATIAL_1 Number Of Records To Fetch At A Time
+# ============================================================================
+# Assume that geometry columns have exactly one SRID?
+DEFAULT_MACRO MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL_MSSQL_SPATIAL_1 
+MSSQL_SPATIAL_1_ASSUME_ONE_SRID_PER_COL "$(MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL_MSSQL_SPATIAL_1)"
+GUI OPTIONAL CHOICE MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL_MSSQL_SPATIAL_1 YES%NO Geometry Columns Have Exactly One SRID
+# ============================================================================
+# The following specifies whether to maintain multiple geometries or not.
+# If set to YES, the Multiple Geometries will be read into an aggregate
+# If NO, the default behavior of selecting one geometry will occur
+DEFAULT_MACRO MSSQL_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_MSSQL_SPATIAL_1 NO
+MSSQL_SPATIAL_1_HANDLE_MULTIPLE_SPATIAL_COLUMNS "$(MSSQL_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_MSSQL_SPATIAL_1)"
+GUI CHOICE MSSQL_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_MSSQL_SPATIAL_1 YES%NO Handle Multiple Spatial Columns
+# ============================================================================
+# The following specifies whether to use the MakeValid() command when reading
+# with a search envelope, may modify invalid source data
+# If YES, invalid data will be made valid; if valid will be read normally.
+# If NO, invalid data will cause the translation to fail.
+DEFAULT_MACRO MSSQL_SPATIAL_IN_USE_MAKE_VALID_MSSQL_SPATIAL_1 NO
+MSSQL_SPATIAL_1_USE_MAKE_VALID "$(MSSQL_SPATIAL_IN_USE_MAKE_VALID_MSSQL_SPATIAL_1)"
+GUI CHOICE MSSQL_SPATIAL_IN_USE_MAKE_VALID_MSSQL_SPATIAL_1 YES%NO Use MakeValid with Search Envelope
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_ATTRIBUTE_READING_MSSQL_SPATIAL_1 DEFLINE_ATTRS
+MSSQL_SPATIAL_1_ATTRIBUTE_READING "$(MSSQL_SPATIAL_IN_ATTRIBUTE_READING_MSSQL_SPATIAL_1)"
+MSSQL_SPATIAL_1_DATASET "$(SourceDataset_MSSQL_SPATIAL_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)SpatialIndexCreator.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_MSSQL_SPATIAL_1 MSSQL_SPATIAL_1
+# -------------------------------------------------------------------------
+
+MSSQL_SPATIAL_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME SpatialIndexCreator
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD MSSQL_SPATIAL_1   INPUT FEATURE_TYPE *    ROUTE MSSQL_SPATIAL MSSQL_SPATIAL_1::dbo.OS_ABPLUS_SAMPLE TO FME_GENERIC ::dbo.OS_ABPLUS_SAMPLE ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+MSSQL_SPATIAL_1_MERGE_DEF MSSQL_SPATIAL_1::dbo.OS_ABPLUS_SAMPLE EXACT dbo.OS_ABPLUS_SAMPLE DEFLINE mssql_sql_statement,,mssql_where_clause,,OBJECTID,integer,UPRN,varchar<openparen>200<closeparen>,CLASS,varchar<openparen>200<closeparen>,CUSTODIAN_CODE,varchar<openparen>200<closeparen>,DEPT_NAME,varchar<openparen>200<closeparen>,LEGAL_NAME,varchar<openparen>200<closeparen>,SUB_BLDG_NAME,varchar<openparen>200<closeparen>,BLDG_NAME,varchar<openparen>200<closeparen>,BLDG_NUMBER,integer,SAO_START_NO,integer,SAO_START_SFX,varchar<openparen>200<closeparen>,SAO_END_NO,integer,SAO_END_SFX,varchar<openparen>200<closeparen>,SAO_TEXT,varchar<openparen>200<closeparen>,PAO_START_NO,integer,PAO_START_SFX,varchar<openparen>200<closeparen>,PAO_END_NO,integer,PAO_END_SFX,varchar<openparen>200<closeparen>,PAO_TEXT,varchar<openparen>200<closeparen>,USRN,varchar<openparen>200<closeparen>,STREET_NAME,varchar<openparen>200<closeparen>,TOWN_NAME,varchar<openparen>200<closeparen>,POSTCODE,varchar<openparen>200<closeparen>,EASTING,numeric<openparen>10<comma>10<closeparen>,NORTHING,numeric<openparen>10<comma>10<closeparen>,LATITUDE,numeric<openparen>20<comma>10<closeparen>,LONGITUDE,numeric<openparen>20<comma>10<closeparen>,FULL_ADDRESS,varchar<openparen>200<closeparen>
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "dbo.OS_ABPLUS_SAMPLE (MSSQL_SPATIAL_1) Splitter"    INPUT FEATURE_TYPE dbo.OS_ABPLUS_SAMPLE    OUTPUT FEATURE_TYPE dbo.OS_ABPLUS_SAMPLE_MSSQL_SPATIAL_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+INCLUDE [    if { {NO} == {YES} } {       puts {MACRO DO_TOPFER TOPFER_INDEX <Unused> <Unused> <Unused>};    } else {       puts {MACRO DO_TOPFER };    } ]
+FACTORY_DEF {*} BoundingBoxFactory    FACTORY_NAME BoundingBoxAccumulator    INPUT  FEATURE_TYPE dbo.OS_ABPLUS_SAMPLE_MSSQL_SPATIAL_1    BOUNDING_BOX_TYPE GEOMETRIC    ACCUMULATE_ATTRIBUTES None    LIST_ATTRS_TO_INCLUDE { <Unused> }    LIST_ATTRS_TO_INCLUDE_MODE <Unused>    $(DO_TOPFER)    OUTPUT BOUNDING_BOX FEATURE_TYPE BoundingBoxAccumulator_BOUNDING_BOX
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME BoundsExtractor    INPUT  FEATURE_TYPE BoundingBoxAccumulator_BOUNDING_BOX    OUTPUT FEATURE_TYPE BoundsExtractor_OUTPUT         @Bounds(fme_encoded,_xmin,_xmax,_ymin,_ymax,_zmin,_zmax,GEOMETRIC)
+
+# -------------------------------------------------------------------------
+MACRO SQLExecutor_DIRECTIVES QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS Yes COMMAND_TIMEOUT 30 NAMED_CONNECTION OS_SampleData
+
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE BoundsExtractor_OUTPUT    QUERY_SQL            "@EvaluateExpression(FDIV,STRING_ENCODED,IF<space>EXISTS<openparen>SELECT<space>*<space>FROM<space>sys.indexes<space>WHERE<space>name=<apos>SI_OS_ABPLUS_SAMPLE<apos><space>AND<space>object_id=OBJECT_ID<openparen><apos>dbo.<openbracket>OS_ABPLUS_SAMPLE<closebracket><apos><closeparen><closeparen><lf><space><space><space><space>BEGIN<lf><space><space><space><space>CREATE<space>SPATIAL<space>INDEX<space>SI_OS_ABPLUS_SAMPLE<space>ON<space>dbo.<openbracket>OS_ABPLUS_SAMPLE<closebracket><openparen>GEOM<closeparen><lf><space><space><space><space>USING<space>GEOMETRY_AUTO_GRID<lf><space><space><space><space>WITH<space><openparen><lf><space><space><space><space><space><space><space><space>BOUNDING_BOX=<openparen><at>Value<openparen>_xmin<closeparen><comma><space><at>Value<openparen>_ymin<closeparen><comma><at>Value<openparen>_xmax<closeparen><comma><at>Value<openparen>_ymax<closeparen><closeparen><comma><lf><space><space><space><space><space><space><space><space>CELLS_PER_OBJECT=16<comma><lf><space><space><space><space><space><space><space><space>DROP_EXISTING=ON<lf><space><space><space><space><space><space><space><space><closeparen><lf><space><space><space><space>END<lf>ELSE<lf><space><space><space><space>CREATE<space>SPATIAL<space>INDEX<space>SI_OS_ABPLUS_SAMPLE<space>ON<space>dbo.<openbracket>OS_ABPLUS_SAMPLE<closebracket><openparen>GEOM<closeparen><lf><space><space><space><space>USING<space>GEOMETRY_AUTO_GRID<lf><space><space><space><space>WITH<space><openparen><lf><space><space><space><space><space><space><space><space>BOUNDING_BOX=<openparen><at>Value<openparen>_xmin<closeparen><comma><space><at>Value<openparen>_ymin<closeparen><comma><at>Value<openparen>_xmax<closeparen><comma><at>Value<openparen>_ymax<closeparen><closeparen><comma><lf><space><space><space><space><space><space><space><space>CELLS_PER_OBJECT=16<lf><space><space><space><space><space><space><space><space><closeparen>,SQLExecutor)"    READER_TYPE          MSSQL_SPATIAL    READER_DATASET       "OS_SampleData"    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     QUERY_ONLY    CONTINUE_ON_READER_ERROR YES    QUERYFCT_PROPAGATE_IDS_ON_SQL_EXECUTE YES    READER_PARAMS        $(SQLExecutor_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE SQLExecutor_RESULT    OUTPUT QUERY FEATURE_TYPE SQLExecutor_INITIATOR    OUTPUT READER_ERROR FEATURE_TYPE SQLExecutor_<REJECTED>
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor RESULT Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_RESULT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor INITIATOR Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_INITIATOR
+FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor <REJECTED> Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_<REJECTED>
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
