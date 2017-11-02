@@ -1,5 +1,5 @@
  # FME-Workspace
 
-SQL Server does not create spatial index of geometry type automatically. Created a separate workspace for creating spatial index. First workspace loads the data into sql server database and the second workspace (which creates the spatial index) runs after the translation is complete.
+SQL Server does creates spatial index automatically however the bounding box coordinates needs to be typed in manually. A FME workspace has been created for creating spatial index. First workspace loads the data into sql server database and the second workspace (which creates the spatial index) runs after the translation is complete.
 
-The second workspace is run by the Python shutdown script.
+runfmeworkspace.py is the python shutdown script in the workspace loading data into SQL Server. This script calls the FME workspace and creates spatial index.
