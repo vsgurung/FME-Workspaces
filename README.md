@@ -6,8 +6,8 @@ runfmeworkspace.py is the python shutdown script in the workspace loading data i
 
 # 20 Feb 2021
 Added more workspaces. These FME workbench uses REST API provided by the organisation to download data. The data that can be downloaded are:
-a. Special Area of Conservation
-b. Special Protection Areas
-c. Sites of Special Scientific Interest.
-d. Nitrate Vulnerable Zones 2021.
-e. Felling Licence Application
+* Special Area of Conservation
+* Special Protection Areas
+* Sites of Special Scientific Interest.
+* Nitrate Vulnerable Zones 2021.
+* Felling Licence Application
