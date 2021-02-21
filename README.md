@@ -11,3 +11,6 @@ Added more workspaces. These FME workbench uses REST API provided by the organis
 * Sites of Special Scientific Interest.
 * Nitrate Vulnerable Zones 2021.
 * Felling Licence Application
+
+# 21 Feb 2021
+Updated the FME workbenches added on 20 Feb 2021. The workbenches now contain private parameters populated by Python script. The parameters are SRID, xmin, xmax, ymin & ymax. These are used while in setting the coordinate system and X, Y extents while creating table in Oracle database.
