@@ -5,7 +5,7 @@ SQL Server does creates spatial index automatically however the bounding box coo
 runfmeworkspace.py is the python shutdown script in the workspace loading data into SQL Server. This script calls the FME workspace and creates spatial index.
 
 # 20 Feb 2021
-Added more workspaces. These FME workbench uses REST API provided by the organisation to download data. The data that can be downloaded are:
+Added more workspaces. These FME workbench uses ESRI REST API to download data. The data that can be downloaded are:
 * Special Area of Conservation
 * Special Protection Areas
 * Sites of Special Scientific Interest.
