@@ -18,3 +18,6 @@ Updated the FME workbenches added on 20 Feb 2021. The workbenches now contain pr
 # 10 May 2021
 * Added FME workbench to generate ArcGIS token using REST API. The workbench is based on sample workbench provided [here](https://locus.co.nz/fme-arcgis-online). The token is generated using the user login credentials.
 * Added FME workbench to generate ArcGIS token using OAuth2 REST endpoint. For more detailed information please refer the ArcGIS Developer documentation [here](https://developers.arcgis.com/rest/users-groups-and-items/token.htm).
+
+# 11 May 2021
+Added FME workbench to use OS API. The workbench is a boiler plate and demonstrates way to generate access token or using the project key in HTTPCaller.
